@@ -11,7 +11,7 @@ if [ -z "$workspace_url" ]; then
 fi
 
 clusters=($(ls clusters))
-job_list=$(curl -s -n -X GET $workspace_url/api/2.1/jobs/list | jq -r '.jobs[].job_id')
+job_list=$(curl -s -n -X GET $workspace_url/api/2.0/jobs/list | jq -r '.jobs[].job_id')
 
 for j in $job_list; do
   job_json=$(curl -s -n -X GET $workspace_url/api/2.1/jobs/get\?job_id=$j)
