@@ -1,5 +1,7 @@
 # bulk-databricks-jobs-update
 
+Script to help customers automatically update all jobs to use jobs compute instead of all-purpose compute.
+
 1. Create `.netrc` with the following:
     ```
     machine <DATABRICKS_INSTANCE> 
